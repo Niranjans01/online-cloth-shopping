@@ -1,5 +1,6 @@
 package com.niranjan.onlinecloths;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +35,9 @@ public class ItemActivity extends AppCompatActivity {
                     PrintStream printStream = new PrintStream(openFileOutput("items.txt", MODE_PRIVATE|MODE_APPEND));
                     printStream.println(itemname.getText().toString()+ "->"+itemprice.getText().toString()+ "->"+itemimagename.getText().toString() + "->"+itemdescription.getText().toString());
                     Toast.makeText(ItemActivity.this, "Items added to : "+getFilesDir(), Toast.LENGTH_SHORT).show();
+                    Intent intent1 = new Intent(ItemActivity.this,Dashboard.class);
+                    startActivity(intent1);
+                    finish();
                 }
                 catch (IOException ioe){
                     ioe.printStackTrace();

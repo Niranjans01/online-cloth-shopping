@@ -61,7 +61,7 @@ public class Dashboard extends AppCompatActivity {
                 String[] itoms = data.split("->");
                 String imageName = itoms[2];
                 int res = getResources().getIdentifier(imageName, "drawable", getPackageName());
-                itemList.add(new ItemModel(itoms[0],res,itoms[1],itoms[3]));
+                itemList.add(new ItemModel(itoms[0],res,itoms[3],itoms[1]));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

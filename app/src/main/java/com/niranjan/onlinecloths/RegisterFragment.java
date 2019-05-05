@@ -44,9 +44,9 @@ SharedPreferences shprf;
                 shprfEditor.putString("username",username.getText().toString());
                 shprfEditor.putString("password",password.getText().toString());
                 shprfEditor.commit();
-
-
                 Toast.makeText(context, "Successfully Registered", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, Dashboard.class);
+                startActivity(intent);
             }
         });
         return view;

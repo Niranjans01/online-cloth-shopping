@@ -26,7 +26,6 @@ public class ViewItems extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         if(bundle!=null){
-            Log.e("mero log", bundle.getString("itemName"));
             itemName.setText(bundle.getString("itemName"));
             itemPrice.setText(bundle.getString("itemPrice"));
             itemDesc.setText(bundle.getString("itemDesc"));
